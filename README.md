@@ -28,12 +28,17 @@ Activate your virtual environment (if not already active):
 source .venv/bin/activate
 ```
 
-Then run:
+For interactive mode run:
+```bash
+python yt-smry.py
+```
+
+For CLI mode run:
 ```bash
 python yt-smry.py <YouTube_URL> [options]
 ```
 
-**Common arguments**:
+**Command line arguments**:
 
 - `--level {short|medium|long}`
   - Controls final summary length. Defaults to `medium`.
@@ -42,30 +47,24 @@ python yt-smry.py <YouTube_URL> [options]
 - `--verbose`
   - Prints additional information about resource checks and processing steps.
 
-**Examples**:
-1. **Default (chunking, medium summary)**:
+**CLI examples**:
+1. **Default**:
    ```bash
    python yt-smry.py "https://www.youtube.com/watch?v=some_video_id"
    ```
-2. **Short summary with chunking**:
+2. **Short summary**:
    ```bash
    python yt-smry.py "https://www.youtube.com/watch?v=some_video_id" --level short
    ```
-3. **Truncated CPU approach**:
+3. **Truncated approach (for CPU mode)**:
    ```bash
    python yt-smry.py "https://www.youtube.com/watch?v=some_video_id" --truncate
    ```
-4. **Verbose mode**:
+4. **Verbose mode (for debugging)**:
    ```bash
    python yt-smry.py "https://www.youtube.com/watch?v=some_video_id" --verbose
    ```
 
-### Interactive Mode
-
-If you run the script **without arguments**, you enter interactive mode:
-```bash
-python yt-smry.py
-```
 ## How It Works
 
 1. **Subtitles Download**  
@@ -93,3 +92,4 @@ Feel free to open a ticket with details if you try a different configuration.
 - This project uses the **Mistral 7B (4-bit)** model from [unsloth](https://github.com/unslothai/unsloth).
 - Thanks to the `yt-dlp` community for the subtitle extraction functionality.
 - BART model courtesy of [Facebook Research](https://github.com/facebookresearch).
+
