@@ -66,12 +66,6 @@ If you run the script **without arguments**, you enter interactive mode:
 ```bash
 python yt-smry.py
 ```
-You will be prompted for:
-1. YouTube URL
-2. Summary length (`short`, `medium`, or `long`)
-3. Verbose logging
-4. Chunking VS truncation
-
 ## How It Works
 
 1. **Subtitles Download**  
@@ -91,7 +85,6 @@ You will be prompted for:
 
 - Currently only tested on Nvidia cards and on Linux.
 - Currently only supports English subtitles.
-- Currently requries *either* a GPU with 5GB+ VRAM *or* 16GB+ free system RAM for cpu.
 
 Feel free to open a ticket with details if you try a different configuration.
 
