@@ -4,17 +4,6 @@ Generate YouTube video text summaries directly on your local machine—completel
 
 ![Screenshot](images/screenshot.jpg)
 
-## Features
-
-- **Automatic Subtitle Extraction**: Uses `yt-dlp` to retrieve English subtitles automatically.
-- **Two Summarization Approaches**:
-  - **GPU**: Mistral 7B (4-bit quantized) for highest-quality summarization. Requires 5GB+ VRAM.
-  - **CPU**:
-  	- Iterative BART-only summarization provides a slower but more accurate summary.
-  	- TextRank extraction with BART for final abstractive summarization provides the fastest summarization.
-- **Short/Medium/Long** Summaries: Choose final output length with `--level` or pick it in interative mode.
-- **Interactive Mode**: If no CLI arguments are supplied, the script prompts the user for input step by step.
-
 ## Installation
 
 1. **Clone this repository**:
